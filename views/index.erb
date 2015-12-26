@@ -1,0 +1,12 @@
+<h1>Things to do </h1>
+
+<% @todos.each_with_index do |todo, i| %>
+  <div>
+    <%= i + 1 %>. <%= todo.description %>
+  </div>
+<% end %>
+
+<form action="/todos" method="post">
+  <input type="text" name="description">
+  <input type="submit">
+</form>
